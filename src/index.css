@@ -12,9 +12,8 @@ html {
 
 body {
   font-size: 2.4rem;
-  font-family: sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #5a3e2b;
-  font-family: "Quicksand";
   font-weight: 500;
 }
 
@@ -82,13 +81,32 @@ input {
   align-items: center;
 }
 
+/* Compact sorting section */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-bottom: 2rem;
+}
+
 .actions button,
-.list select {
+.actions select {
   text-transform: uppercase;
   padding: 0.8rem 2.4rem;
   font-size: 1.4rem;
   font-weight: 700;
-  margin: 0 0.8rem;
+  margin: 0;
+  border-radius: 5rem;
+}
+
+.clear-button {
+  background-color: #ff6666;
+  color: white;
+}
+
+.clear-button:hover {
+  background-color: #e44c4c;
 }
 
 .list ul {
@@ -107,6 +125,10 @@ input {
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  background-color: #3e2b1e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 input[type="checkbox"] {
@@ -122,6 +144,11 @@ input[type="checkbox"] {
   font-size: 1.8rem;
   padding: 0.8rem;
   transform: translateY(2px);
+  color: #ff6666;
+}
+
+.list li button:hover {
+  color: #e44c4c;
 }
 
 .stats {
@@ -129,4 +156,10 @@ input[type="checkbox"] {
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
+}
+
+/* Conditional rendering for 'You got everything!' */
+.stats .highlight {
+  color: #28a745;
+  font-weight: 700;
 }
